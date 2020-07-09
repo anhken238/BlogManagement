@@ -22,26 +22,25 @@ import org.hibernate.annotations.UpdateTimestamp;
 public class Post {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	 private int id;
+	 private Long id;
 	    private String introduce;
 	    private String title;
 	    private String content;
-	    private String image;
-	    private String path;
-	    private String creator;
+//	    private String image;
+//	    private String path;
+//	    private String creator;
 	    
-	    @Temporal(TemporalType.TIMESTAMP)
-	    @Column(updatable = false)
-	    @CreationTimestamp
-	    private Date dateCreated;
-	    private String finalEditor;
+//	    @Temporal(TemporalType.TIMESTAMP)
+//	    @Column(updatable = false)
+//	    @CreationTimestamp
+//	    private Date dateCreated;
+//	    private String finalEditor;
+//	    
+//	    @Temporal(TemporalType.TIMESTAMP)
+//	    @UpdateTimestamp
+//	    private Date lastModifiedDate;
 	    
-	    @Temporal(TemporalType.TIMESTAMP)
-	    @UpdateTimestamp
-	    private Date lastModifiedDate;
-	    private int idCategories;
-	    private int idUsers;
-	    private String nameCategories;
+	 
 	    private int count;
 	    public Post() {}
 	    
@@ -55,10 +54,10 @@ public class Post {
 	    private User user;
 
 	    
-		public int getId() {
+		public Long getId() {
 			return id;
 		}
-		public void setId(int id) {
+		public void setId(Long id) {
 			this.id = id;
 		}
 		public String getIntroduce() {
@@ -79,60 +78,54 @@ public class Post {
 		public void setContent(String content) {
 			this.content = content;
 		}
-		public String getImage() {
-			return image;
-		}
-		public void setImage(String image) {
-			this.image = image;
-		}
-		public String getPath() {
-			return path;
-		}
-		public void setPath(String path) {
-			this.path = path;
-		}
-		public String getCreator() {
-			return creator;
-		}
-		public void setCreator(String creator) {
-			this.creator = creator;
-		}
-		public Date getDateCreated() {
-			return dateCreated;
-		}
-		public void setDateCreated(Date dateCreated) {
-			this.dateCreated = dateCreated;
-		}
-		public String getFinalEditor() {
-			return finalEditor;
-		}
-		public void setFinalEditor(String finalEditor) {
-			this.finalEditor = finalEditor;
-		}
-		public Date getLastModifiedDate() {
-			return lastModifiedDate;
-		}
-		public void setLastModifiedDate(Date lastModifiedDate) {
-			this.lastModifiedDate = lastModifiedDate;
-		}
-		public int getIdCategories() {
-			return idCategories;
-		}
-		public void setIdCategories(int idCategories) {
-			this.idCategories = idCategories;
-		}
-		public int getIdUsers() {
-			return idUsers;
-		}
-		public void setIdUsers(int idUsers) {
-			this.idUsers = idUsers;
-		}
-		public String getNameCategories() {
-			return nameCategories;
-		}
-		public void setNameCategories(String nameCategories) {
-			this.nameCategories = nameCategories;
-		}
+//		public String getImage() {
+//			return image;
+//		}
+//		public void setImage(String image) {
+//			this.image = image;
+//		}
+//		public String getPath() {
+//			return path;
+//		}
+//		public void setPath(String path) {
+//			this.path = path;
+//		}
+//		public String getCreator() {
+//			return creator;
+//		}
+//		public void setCreator(String creator) {
+//			this.creator = creator;
+//		}
+//		public Date getDateCreated() {
+//			return dateCreated;
+//		}
+//		public void setDateCreated(Date dateCreated) {
+//			this.dateCreated = dateCreated;
+//		}
+//		public String getFinalEditor() {
+//			return finalEditor;
+//		}
+//		public void setFinalEditor(String finalEditor) {
+//			this.finalEditor = finalEditor;
+//		}
+//		public Date getLastModifiedDate() {
+//			return lastModifiedDate;
+//		}
+//		public void setLastModifiedDate(Date lastModifiedDate) {
+//			this.lastModifiedDate = lastModifiedDate;
+//		}
+//		public Long getIdCategories() {
+//			return idCategories;
+//		}
+//		public void setIdCategories(Long idCategories) {
+//			this.idCategories = idCategories;
+//		}
+//		public Long getIdUsers() {
+//			return idUsers;
+//		}
+//		public void setIdUsers(Long idUsers) {
+//			this.idUsers = idUsers;
+//		}
 		public int getCount() {
 			return count;
 		}

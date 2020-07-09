@@ -3,6 +3,7 @@ package com.brycen.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
@@ -20,13 +21,15 @@ import com.brycen.repository.PostRepository;
 import com.brycen.service.IPostService;
 
 @RestController
-@RequestMapping({ "/posts" })
-public class PostController {
-	private IPostService postService;
+@RequestMapping({"/posts"})
 
-	public PostController() {
-		this.postService = postService;
-	}
+public class PostController {
+	@Autowired
+	private IPostService postService;
+//
+//	public PostController() {
+//		this.postService = postService;
+//	}
 
 	// show list posts
 	@GetMapping
@@ -54,11 +57,11 @@ public class PostController {
 			record.setTitle(post.getTitle());
 			record.setIntroduce(post.getIntroduce());
 			record.setContent(post.getContent());
-			record.setImage(post.getImage());
-			record.setCreator(post.getCreator());
-			record.setFinalEditor(post.getFinalEditor());
-			record.setLastModifiedDate(post.getLastModifiedDate());
-			record.setNameCategories(post.getNameCategories());
+//			record.setImage(post.getImage());
+//			record.setCreator(post.getCreator());
+//			record.setFinalEditor(post.getFinalEditor());
+//			record.setLastModifiedDate(post.getLastModifiedDate());
+//			record.setNameCategories(post.getNameCategories());
 			record.setCount(post.getCount());
 			Post updated = postService.save(record);
 			return ResponseEntity.ok().body(updated);
